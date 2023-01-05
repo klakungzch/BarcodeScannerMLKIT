@@ -15,6 +15,12 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            //abiFilters  "armeabi","armeabi-v7a","x86","x86_64"
+            abiFilters  "armeabi","armeabi-v7a","x86"
+            //abiFilters "armeabi"
+            // abiFilters 'armeabi-v7a', 'x86'
+        }
     }
 
     buildTypes {
@@ -45,7 +51,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel:2.4.0"
 
     // Use this dependency to bundle the model with your app
-    implementation 'com.google.mlkit:barcode-scanning:17.0.0'
+    implementation 'com.google.mlkit:barcode-scanning:17.0.3'
 
     // CameraX library
     implementation("androidx.camera:camera-camera2:${camerax_version}")
